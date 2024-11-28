@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sitemap Audit</title>
+  <style>
+    :root {
+      --primary-color: #10b981; /* Emerald */
+      --primary-hover-color: #059669; /* Darker emerald */
+      --border-color: #d4d4d8; /* Neutral border */
+      --bg-color: #f9fafb; /* Neutral light */
+      --text-color: #111827; /* Very dark gray for body text */
+      --heading-color: #1f2937; /* Darker neutral */
+      --input-bg-color: #f3f4f6; /* Slightly lighter gray */
+      --input-border-color: #e5e7eb; /* Neutral gray */
+      --input-focus-border-color: #10b981; /* Emerald */
+      --table-header-bg: #f3f4f6; /* Table header background */
+      --table-hover-bg: #e5e7eb; /* Table row hover background */
+      --shadow-color: rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    }
+
+    body {
+      font-family: Inter, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 20px;
+      width: 480px;
+      max-width: 560px;
+      margin: auto;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px var(--shadow-color);
+    }
+
+    h3 {
+      color: var(--heading-color);
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    #sitemapUrl {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+      color: var(--text-color);
+      background-color: var(--input-bg-color);
+      border: 1px solid var(--input-border-color);
+      border-radius: 6px;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+
+    #sitemapUrl:focus {
+      border-color: var(--input-focus-border-color);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3); /* Emerald outline */
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px 16px;
+      background-color: var(--primary-color);
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 12px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--primary-hover-color);
+    }
+
+    #report {
+      margin-top: 20px;
+      background-color: white;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 12px;
+      box-shadow: 0 2px 4px var(--shadow-color);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background-color: var(--table-header-bg);
+      color: var(--heading-color);
+      font-weight: 600;
+    }
+
+    tr:hover {
+      background-color: var(--table-hover-bg);
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--bg-color);
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--primary-hover-color);
+    }
+
+    .sitemap-item {
+      padding: 8px 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      margin-bottom: 10px;
+      background-color: white;
+      box-shadow: 0 1px 2px var(--shadow-color);
+    }
+
+    .sitemap-item:hover {
+      background-color: var(--table-hover-bg);
+    }
+  </style>
+</head>
+<body>
+  <h3>Sitemap Audit</h3>
+  <input type="text" id="sitemapUrl" placeholder="Enter Sitemap URL" />
+  <button id="analyze">Audit Sitemap</button>
+  <div id="report" style="display: none;"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

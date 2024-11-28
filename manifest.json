@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Sitemap Audit",
+    "version": "1.0",
+    "description": "Audit sitemaps to analyze URLs and structure.",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+      
+    }
+  }
+  
