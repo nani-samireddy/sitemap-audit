@@ -11,9 +11,12 @@ This chrome extension will help you to audit the sitemap of a website. It will s
    
 ## Usage
 1. Click on the extension icon in the toolbar.
+    ![alt text](screenshots/1.png)
 2. Enter the URL of the sitemap file.
 3. Click on the `Audit` button.
+   ![alt text](screenshots/2.png)
 4. The extension will show you the list of URLs in the sitemap file. 
+    ![alt text](screenshots/3.png)
 5. You can click on the URL to open it in a new tab. 
 
 ## License
