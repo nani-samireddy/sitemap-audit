@@ -4,9 +4,7 @@
     "version": "1.0",
     "description": "Audit sitemaps to analyze URLs and structure.",
     "permissions": [
-      "activeTab",
-      "scripting",
-      "storage"
+      "activeTab"
     ],
     "background": {
       "service_worker": "background.js"
